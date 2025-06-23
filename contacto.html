@@ -1,59 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contacto.css">
-    <title>Contacto</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="contacto.css" />
+  <title>Contacto</title>
 </head>
 <body>
-    <header>
-    <img src="assets/iconos/Logo.jpeg" alt="Logo de la plataforma" class="logo-header">
+
+  <header>
+    <img src="assets/iconos/Logo.jpeg" alt="Logo de la plataforma" class="logo-header" />
     <h1>DreamTech Hexa</h1>
     <nav>
       <a href="index.html">Inicio</a>
       <a href="#">Juegos</a>
-      <a href="otros.html">herramientas</a>
+      <a href="otros.html">Herramientas</a>
       <a href="contacto.html">Contacto</a>
     </nav>
   </header>
 
-    <main>
-        <section class="contacto">
-            <h2>Contacto</h2>
-            <p>¡Gracias por visitar nuestra plataforma! Si tienes alguna pregunta, sugerencia o simplemente quieres ponerte en contacto con nosotros, no dudes en hacerlo. Estamos aquí para ayudarte.</p>
-            <p>Si tienes alguna pregunta o sugerencia, no dudes en contactarnos a través del siguiente formulario:</p>
-            <form action="https://formsubmit.co/marcilloanthonymiguel@gmail.com" method="POST">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" required>
-            
-                <label for="email">Correo electrónico:</label>
-                <input type="email" name="email" required>
-            
-                <label for="motivo">Motivo:</label>
-                <select name="motivo" required>
-                    <option value="sugerencia">Sugerencia</option>
-                    <option value="reporte">Reporte de error</option>
-                    <option value="consulta">Consulta</option>
-                    <option value="otro">Otros</option>
-                </select>
-            
-                <label for="mensaje">Mensaje:</label>
-                <textarea name="mensaje" required></textarea>
-            
-                <!-- Redirigir a esta misma página con parámetro -->
-                <input type="hidden" name="_next" value="contacto.html?enviado=true">
-                <input type="hidden" name="_captcha" value="false">
-            
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+  <main>
+    <section class="contacto">
+      <h2>Contacto</h2>
+      <p>¡Gracias por visitar nuestra plataforma! Si tienes alguna pregunta, sugerencia o simplemente quieres ponerte en contacto con nosotros, no dudes en hacerlo. Estamos aquí para ayudarte.</p>
 
+      <!-- Mensaje de éxito -->
+      <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+        ¡Gracias por tu mensaje! Te responderemos pronto.
+      </div>
 
+      <form action="https://formsubmit.co/marcilloanthonymiguel@gmail.com" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" required />
 
-    <footer>
-        &copy; 2025 DreamTech Hexa. Todos los derechos reservados.
-    </footer>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" name="email" id="email" required />
+
+        <label for="motivo">Motivo:</label>
+        <select name="motivo" id="motivo" required>
+          <option value="sugerencia">Sugerencia</option>
+          <option value="reporte">Reporte de error</option>
+          <option value="consulta">Consulta</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" required></textarea>
+
+        <!-- Opciones ocultas de FormSubmit -->
+        <input type="hidden" name="_next" value="https://anthony56025.github.io/DreamTech-Hexa/contacto.html?enviado=true" />
+        <input type="hidden" name="_captcha" value="false" />
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 DreamTech Hexa. Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // Mostrar mensaje si ?enviado=true
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("enviado") === "true") {
+      document.getElementById("mensajeExito").style.display = "block";
+    }
+  </script>
+
 </body>
 </html>
