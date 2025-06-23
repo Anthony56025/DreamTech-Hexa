@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #E5E1DA;
+  color: #222;
+  min-height: 100vh;
+  /* ...otras reglas... */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; /
+}
+html {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+html::-webkit-scrollbar {
+  display: none; 
+}
+/* -------------------- Header y menú principal igual a styles.css -------------------- */
+header {
+  background-color: #92C7CF;
+  color: #fff;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px #92C7CF33;
+  border-bottom: 2px solid #D0E8C5;
+  position: obsolute;
+  top: 0;
+  z-index: 10;
+}
+.logo-header {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #D0E8C5;
+  object-fit: cover;
+  background: #fff;
+}
+h1 {
+  font-size: 40px;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
+  margin-left: 20px;
+  flex: 1;
+}
+nav {
+  font-size: 20px;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: transparent;
+  border: 2px solid #D0E8C5;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+nav a:hover,
+nav a:focus {
+  background: #D0E8C5;
+  color: #222;
+  border: 2px solid #92C7CF;
+}
+/* -------------------- diseño del formulario -------------------- */
+form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid #D0E8C5;
+}
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+form input[type="submit"] {
+  background-color: #92C7CF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+form input[type="submit"]:hover {
+  background-color: #D0E8C5;
+  color: #222;
+}
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+/* -------------------- select -------------------- */
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #555;
+}
+button {
+  background-color: #92C7CF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #D0E8C5;
+  color: #222;
+}
+
